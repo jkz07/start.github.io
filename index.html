@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+@media screen and (max-width: 758px) {
+
+    /* Estilo Geral */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Ubuntu", sans-serif;
+        background-color: #ffffff;
+        overflow-x: hidden;
+    }
+
+    .content-background {
+        background-color: #74C69D;
+        /* Cor de fundo verde */
+        padding: 20px 0;
+        /* Espaço ao redor do conteúdo */
+        color: white;
+        /* Cor do texto dentro do container */
+    }
+
+    /* Cabeçalho */
+    header {
+        background-color: #74C69D;
+        color: white;
+        padding: 10px 20px;
+    }
+
+    .header-content {
+        display: flex;
+        /* Usa flexbox para o layout dos itens internos */
+        width: 100%;
+        /* Garante que o conteúdo ocupe toda a largura do cabeçalho */
+        height: 80px;
+        align-items: center;
+        /* Alinha todos os itens verticalmente ao centro */
+    }
+
+    .logo1 {
+        font-size: 40px;
+    }
+
+    .start {
+        margin-left: 20px;
+        /* Ajusta o espaço entre a logo e o texto "Start" */
+        font-size: 20px;
+    }
+
+    .menu {
+        font-size: 30px;
+        margin-left: auto;
+        /* Move o menu para a direita */
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    /* Conteúdo Principal */
+    main {
+        text-align: center;
+        max-width: 100%;
+        margin: 20px auto;
+        /* Centraliza o conteúdo principal */
+    }
+
+    .img-amg {
+        text-align: center;
+        margin: 20px 0;
+        /* Espaço entre a imagem e o conteúdo */
+    }
+
+    .img-amg img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .wel {
+        margin: 20px;
+        text-align: left;
+        font-size: 20px;
+    }
+
+    .txt2 {
+        margin: 20px;
+    }
+
+    button {
+        display: flex;
+        /* Usa flexbox para centralizar o texto dentro do botão */
+        justify-content: center;
+        /* Centraliza o texto horizontalmente */
+        align-items: center;
+    }
+
+    .but1 button {
+        font-size: 18px;
+        padding: 14px 150px;
+        background-color: #fff;
+        color: #000000;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* Seções Adicionais */
+    section {
+        margin: 20px 0;
+    }
+
+    .prt {
+        text-align: center;
+        color: #74C69D;
+    }
+
+    .tlt1 {
+        text-align: center;
+    }
+
+    .partners {
+        display: flex;
+        flex-direction: column;
+        /* Alinha os itens em uma coluna */
+        align-items: center;
+        /* Centraliza os itens horizontalmente */
+        gap: 10px;
+        /* Espaço entre os ícones dos parceiros */
+    }
+
+    .partners img {
+        width: 100px;
+        /* Limita o tamanho das imagens dos parceiros */
+        height: auto;
+        /* Se necessário, ajuste a largura das imagens para se adequarem ao layout */
+    }
+
+    .but1, .but2, .but3, .but4, .but5{
+        display: flex;
+        justify-content: center;
+        /* Centraliza horizontalmente */
+        padding: 20px 0;
+        /* Espaço ao redor do botão */
+    }
+
+    .but2 button, .but3 button, .but4 button {
+        font-size: 18px;
+        padding: 14px 150px;
+        background-color: #212529;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .img-amg2, .img-amg3 {
+        flex: 1; /* Permite que a imagem ocupe o espaço disponível */
+        text-align: center; 
+    }
+
+
+    .tilt1, .tilt2 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .texto2, .texto4 {
+        color: gray;
+        text-align: center;
+    }
+
+    .team {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        /* Espaço entre os membros da equipe */
+        background-color: #ffffff;
+
+    }
+
+    .team-member {
+        text-align: center;
+        border: 5px solid #ffffff;
+        padding: 40px;
+        width: 190px;
+        /* Largura fixa para o quadro */
+        height: 200px;
+        /* Altura fixa para o quadro */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .team-member img {
+        max-width: 100px;
+        /* Limita o tamanho das imagens dos membros da equipe */
+        height: auto;
+    }
+
+    .but5 button {
+        margin-top: 15px;
+        font-size: 18px;
+        padding: 14px 28px;
+        background-color: #212529;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .prof {
+        font-size: 10px;
+        color: #848a91;
+    }
+
+    /* Rodapé */
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #74C69D;
+        color: #ffffff;
+    }
+
+    .footer-icons {
+        display: flex;
+        justify-content: center;
+        /* Centraliza os ícones horizontalmente */
+        gap: 15px;
+        /* Espaço entre os ícones, ajuste conforme necessário */
+        margin-bottom: 10px;
+    }
+
+}
+
+@media screen and (min-width: 758px) and (max-width: 1024px){
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Ubuntu", sans-serif;
+        background-color: #ffffff;
+        overflow-x: hidden;
+    }
+
+    .content-background {
+        background-color: #74C69D;
+        /* Cor de fundo verde */
+        padding: 20px 0;
+        /* Espaço ao redor do conteúdo */
+        color: white;
+        /* Cor do texto dentro do container */
+    }
+
+    header {
+        background-color: #74C69D;
+        color: white;
+        padding: 10px 20px;
+    }
+
+    .header-content {
+        display: flex;
+        /* Usa flexbox para o layout dos itens internos */
+        width: 100%;
+        /* Garante que o conteúdo ocupe toda a largura do cabeçalho */
+        height: 80px;
+        align-items: center;
+        /* Alinha todos os itens verticalmente ao centro */
+    }
+
+    .logo1 {
+        font-size: 40px;
+        margin-left: 20px;
+    }
+
+    .start {
+        margin-left: 10px;
+        /* Ajusta o espaço entre a logo e o texto "Start" */
+        font-size: 20px;
+    }
+
+    .menu {
+        display: none; /* Oculta o menu em tablets */
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: flex-end; /* Alinha a navbar à direita */
+        width: 100%; /* Garante que a navbar ocupe toda a largura disponível */
+        gap: 40px;
+        font-size: 18px;
+        margin-right: 40px;
+    }
+
+    .img-amg {
+        flex: 1; /* Permite que a imagem ocupe o espaço disponível */
+        text-align: right; /* Alinha a imagem à direita */
+        margin-right: 40px;
+    }
+
+    .img-amg img {
+        max-width: 100%; /* Ajusta a largura máxima da imagem */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: row-reverse; /* Alinha o conteúdo principal em linha horizontal */
+        justify-content: space-between; /* Espaça o conteúdo principal para as extremidades */
+        align-items: center; /* Alinha os itens verticalmente ao centro */
+        margin-top: 20px; /* Espaço superior para separar o conteúdo */
+    }
+
+    
+    .text-and-button {
+        flex: 1; /* Permite que a seção ocupe o espaço disponível */
+        text-align: left; /* Alinha o texto e o botão à esquerda */
+        padding-right: 20px;
+        margin: 40px;
+    }
+
+    .but1 button {
+        font-size: 18px;
+        padding: 14px 50px; /* Ajusta o padding do botão */
+        background-color: #fff;
+        color: #000000;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .txt2{
+        color: rgb(228, 224, 224);
+    }
+    
+    .prt {
+        text-align: center;
+        color: #74C69D;
+    }
+
+    .tlt1 {
+        text-align: center;
+    }
+
+    .partners {
+        display: flex;
+        flex-wrap: wrap; /* Permite que as imagens se movam para a próxima linha */
+        justify-content: center; /* Centraliza as imagens horizontalmente */
+        gap: 10px; /* Espaço entre as imagens */
+    }
+
+    .partner-img {
+        width: 150px; /* Ajuste o tamanho das imagens conforme necessário */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+    .but2, .but3 {
+        display: flex;
+        justify-content: center;
+        /* Centraliza horizontalmente */
+        padding: 20px 0;
+        /* Espaço ao redor do botão */
+    }
+
+    .but2 button, .but3 button, .but4 button, .but5 button {
+        font-size: 18px;
+        padding: 14px 50px;
+        background-color: #212529;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 30px;
+    }
+
+    .img-amg2 {
+        flex: 1; /* Permite que a imagem ocupe o espaço disponível */
+        text-align: left; /* Alinha a imagem à direita */
+        margin-right: 40px;
+    }
+
+    .img-amg2 img {
+        max-width: 100%; /* Ajusta a largura máxima da imagem */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+    .text-and-button2 {
+        flex: 1; /* Permite que a seção ocupe o espaço disponível */
+        text-align: left;
+        padding-right: 20px;
+        margin: 40px;
+    }
+
+    .texto2, .texto4{
+        color: #848a91;
+    }
+
+    .but3, .but4{
+        display: flex;
+        justify-content: left;
+    }
+
+    .txt3{
+        color: #000000;
+    }
+
+    .p1 {
+        display: flex;
+        flex-direction: row; /* Alinha o conteúdo principal em linha horizontal */
+        justify-content: space-between; /* Espaça o conteúdo principal para as extremidades */
+        align-items: center; /* Alinha os itens verticalmente ao centro */
+        margin-top: 10px; /* Espaço superior para separar o conteúdo */
+    }
+
+    .p2 {
+        display: flex;
+        flex-direction: row-reverse; /* Alinha o conteúdo principal em linha horizontal */
+        justify-content: space-between; /* Espaça o conteúdo principal para as extremidades */
+        align-items: center; /* Alinha os itens verticalmente ao centro */
+        margin-top: 10px; /* Espaço superior para separar o conteúdo */
+    }
+
+    .team {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        /* Espaço entre os membros da equipe */
+        background-color: #ffffff;
+
+    }
+
+    .team-member {
+        text-align: center;
+        border: 5px solid #ffffff;
+        padding: 40px;
+        width: 190px;
+        /* Largura fixa para o quadro */
+        height: 200px;
+        /* Altura fixa para o quadro */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .team-member img {
+        max-width: 100px;
+        /* Limita o tamanho das imagens dos membros da equipe */
+        height: auto;
+    }
+
+    .prof {
+        font-size: 10px;
+        color: #848a91;
+    }
+    
+    .but5{
+        display: flex;
+        justify-content: center;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #74C69D;
+        color: #ffffff;
+        margin-top: 30px;
+    }
+
+    .footer-icons {
+        display: flex;
+        justify-content: center;
+        /* Centraliza os ícones horizontalmente */
+        gap: 15px;
+        /* Espaço entre os ícones, ajuste conforme necessário */
+        margin-bottom: 10px;
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Ubuntu", sans-serif;
+        background-color: #ffffff;
+        overflow-x: hidden;
+    }
+
+    .content-background {
+        background-color: #74C69D;
+        /* Cor de fundo verde */
+        padding: 20px 0;
+        /* Espaço ao redor do conteúdo */
+        color: white;
+        /* Cor do texto dentro do container */
+    }
+
+    header {
+        background-color: #74C69D;
+        color: white;
+        padding: 10px 20px;
+    }
+
+    .header-content {
+        display: flex;
+        /* Usa flexbox para o layout dos itens internos */
+        width: 100%;
+        /* Garante que o conteúdo ocupe toda a largura do cabeçalho */
+        height: 80px;
+        align-items: center;
+        /* Alinha todos os itens verticalmente ao centro */
+    }
+
+    .logo1 {
+        font-size: 40px;
+        margin-left: 20px;
+    }
+
+    .start {
+        margin-left: 10px;
+        /* Ajusta o espaço entre a logo e o texto "Start" */
+        font-size: 20px;
+    }
+
+    .menu {
+        display: none; /* Oculta o menu em tablets */
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: flex-end; /* Alinha a navbar à direita */
+        width: 100%; /* Garante que a navbar ocupe toda a largura disponível */
+        gap: 40px;
+        font-size: 18px;
+        margin-right: 40px;
+    }
+
+    .img-amg {
+        flex: 1; /* Permite que a imagem ocupe o espaço disponível */
+        text-align: right; /* Alinha a imagem à direita */
+        margin-right: 40px;
+    }
+
+    .img-amg img {
+        max-width: 100%; /* Ajusta a largura máxima da imagem */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: row-reverse; /* Alinha o conteúdo principal em linha horizontal */
+        justify-content: space-between; /* Espaça o conteúdo principal para as extremidades */
+        align-items: center; /* Alinha os itens verticalmente ao centro */
+        margin-top: 20px; /* Espaço superior para separar o conteúdo */
+    }
+
+    
+    .text-and-button {
+        flex: 1; /* Permite que a seção ocupe o espaço disponível */
+        text-align: left; /* Alinha o texto e o botão à esquerda */
+        padding-right: 20px;
+        margin: 40px;
+    }
+
+    .but1 button {
+        font-size: 18px;
+        padding: 14px 50px; /* Ajusta o padding do botão */
+        background-color: #fff;
+        color: #000000;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .txt2{
+        color: rgb(228, 224, 224);
+    }
+    
+    .prt {
+        text-align: center;
+        color: #74C69D;
+    }
+
+    .tlt1 {
+        text-align: center;
+    }
+
+    .partners {
+        display: flex;
+        justify-content: center; /* Centraliza as imagens horizontalmente */
+        gap: 10px; /* Espaço entre as imagens */
+    }
+
+    .partner-img {
+        width: 150px; /* Ajuste o tamanho das imagens conforme necessário */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+    .but2, .but3 {
+        display: flex;
+        justify-content: center;
+        /* Centraliza horizontalmente */
+        padding: 20px 0;
+        /* Espaço ao redor do botão */
+    }
+
+    .but2 button, .but3 button, .but4 button, .but5 button {
+        font-size: 18px;
+        padding: 14px 50px;
+        background-color: #212529;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 30px;
+    }
+
+    .img-amg2 {
+        flex: 1; /* Permite que a imagem ocupe o espaço disponível */
+        text-align: left; /* Alinha a imagem à direita */
+        margin-right: 40px;
+    }
+
+    .img-amg2 img {
+        max-width: 100%; /* Ajusta a largura máxima da imagem */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+    .text-and-button2 {
+        flex: 1; /* Permite que a seção ocupe o espaço disponível */
+        text-align: left;
+        padding-right: 20px;
+        margin: 40px;
+    }
+
+    .texto2, .texto4{
+        color: #848a91;
+    }
+
+    .but3, .but4{
+        display: flex;
+        justify-content: left;
+    }
+
+    .txt3{
+        color: #000000;
+    }
+
+    .p1 {
+        display: flex;
+        flex-direction: row; /* Alinha o conteúdo principal em linha horizontal */
+        justify-content: space-between; /* Espaça o conteúdo principal para as extremidades */
+        align-items: center; /* Alinha os itens verticalmente ao centro */
+        margin-top: 10px; /* Espaço superior para separar o conteúdo */
+    }
+
+    .p2 {
+        display: flex;
+        flex-direction: row-reverse; /* Alinha o conteúdo principal em linha horizontal */
+        justify-content: space-between; /* Espaça o conteúdo principal para as extremidades */
+        align-items: center; /* Alinha os itens verticalmente ao centro */
+        margin-top: 10px; /* Espaço superior para separar o conteúdo */
+    }
+
+    .team {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        /* Espaço entre os membros da equipe */
+        background-color: #ffffff;
+
+    }
+
+    .team-member {
+        text-align: center;
+        border: 5px solid #ffffff;
+        padding: 40px;
+        width: 190px;
+        /* Largura fixa para o quadro */
+        height: 200px;
+        /* Altura fixa para o quadro */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .team-member img {
+        max-width: 100px;
+        /* Limita o tamanho das imagens dos membros da equipe */
+        height: auto;
+    }
+
+    .prof {
+        font-size: 10px;
+        color: #848a91;
+    }
+    
+    .but5{
+        display: flex;
+        justify-content: center;
+    }
+
+    footer {
+        padding: 20px;
+        background-color: #74C69D;
+        color: #ffffff;
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between; /* Espaça o conteúdo do footer para as extremidades */
+        align-items: center;
+    }
+
+    .footer-icons {
+        display: flex;
+        justify-content: right;
+        gap: 15px;
+        /* Espaço entre os ícones, ajuste conforme necessário */
+    }
+}
+    </style>
+    <title>Start</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo1"><i class="fa fa-forumbee" aria-hidden="true"></i></div>
+            <div class="start">
+                <h1>Start</h1>
+            </div>
+            <div class="menu"><i class="fa fa-align-justify" aria-hidden="true"></i></div>
+            <div class="navbar">
+                <a>Home</a>
+                <a>Portfolio</a>
+                <a>Services</a>
+                <a>Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="content-background">
+        <main>
+            <div class="main-content">
+                <div class="img-amg">
+                    <img src="./assets/amg.png" alt="amigos" />
+                </div>
+                <div class="text-and-button">
+                    <div class="txt1">
+                        <h1 class="wel">WELCOME</h1>
+                        <h1>Lorem, ipsum dolor sit amet consectetur</h1>
+                    </div>
+                    <div class="txt2">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti,
+                            sunt laborum vitae error necessitatibus atque iure nostrum! Laborum,
+                            voluptates est magnam eaque, tempora incidunt veniam optio ducimus
+                            dolorem blanditiis error?
+                        </p>
+                    </div>
+                    <div class="but1">
+                        <button>Explore</button>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+        
+    </div>
+
+    <section>
+        <div class="prt">
+            <h2>PARTNERS</h2>
+        </div>
+        <div class="tlt1">
+            <h1><b>Lorem Ipsum Dolor</b></h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </div>
+        <div class="partners">
+            <img src="./assets/google.png" alt="google" />
+            <img src="./assets/microsoft.png" alt="microsoft" />
+            <img src="./assets/air.png" alt="airbnb" />
+            <img src="./assets/facebook.png" alt="facebook" />
+            <img src="./assets/spotify.png" alt="spotify" />
+        </div>
+
+        <div class="but2"><button>Learn More</button></div>
+    </section>
+
+    <section class="p1">
+        <div class="img-amg2">
+            <img src="./assets/amg2.png" alt="amg2" width="370px" />
+        </div>
+        <div class="text-and-button2">
+        <div class="txt3">
+                <p class="tilt1"><b>Lorem ipsum dolor sit amet consectetur</b></p>
+            <p class="texto2">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi deleniti
+                id non quisquam corporis exercitationem ex dolore saepe voluptates, hic
+                eius numquam earum, fuga consectetur cumque?
+            </p>
+        </div>
+        <div class="but3"><button>Learn More</button></div>
+    </div>
+    </section>
+
+    <section class="p2">
+        <div class="img-amg3">
+            <img src="./assets/amg3.png" alt="amg3" width="370px" />
+        </div>
+        <div class="text-and-button2">
+        <div class="txt4">
+                <p class="tilt2"><b>Lorem ipsum dolor sit amet consectetur</b></p>
+            <p class="texto4">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi deleniti
+                id non quisquam corporis exercitationem ex dolore saepe voluptates, hic
+                eius numquam earum, fuga consectetur cumque?
+            </p>
+        </div>
+        <div class="but4"><button>Learn More</button></div>
+    </div>
+    </section>
+
+    <section>
+        <div class="prt">
+            <h2>TEAM</h2>
+        </div>
+        <div class="tlt1">
+            <h1>Our Talents</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="team">
+            <div class="team-member">
+                <img src="./assets/perfil.png" alt="perfil" />
+                <div class="nome">
+                    <h1>Peg Legge</h1>
+                </div>
+                <div class="prof">
+                    <h2>CEO</h2>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="./assets/perfil.png" alt="perfil" />
+                <div class="nome">
+                    <h1>Richard Guerra</h1>
+                </div>
+                <div class="prof">
+                    <h2>CTO</h2>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="./assets/perfil.png" alt="perfil" />
+                <div class="nome">
+                    <h1>Alexandra Stolz</h1>
+                </div>
+                <div class="prof">
+                    <h2>DESIGNER</h2>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="./assets/perfil.png" alt="perfil" />
+                <div class="nome">
+                    <h1>Janet Bray</h1>
+                </div>
+                <div class="prof">
+                    <h2>DEVELOPER</h2>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="but5"><button>Learn More</button></div>
+    </section>
+
+    <footer>
+        <div class="footer-icons">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+            <i class="fa fa-music" aria-hidden="true"></i>
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+        </div>
+       
+        &copy; Start, 2022. All rights reserved.
+    </footer>
+</body>
+
+</html>
